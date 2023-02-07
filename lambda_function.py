@@ -197,6 +197,7 @@ def lambda_handler(event, context):
         cost_jpy = get_openai_cost_jpy(openai_response)
         store_conversation(user_id, query, openai_response)
     except:
+        cost_jpy = 0
         response = 'OpenAIが壊れてました😢'
     
     line_reply(reply_token, response, cost_jpy)
