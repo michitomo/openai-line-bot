@@ -36,11 +36,11 @@ def openai_completions(prompt):
         + "AI: I am an AI created by OpenAI. How can I help you today?\n"
         + "Human: " + prompt
         + "\nAI:",
-        "temperature": 0,
+        "temperature": 0.9,
         "max_tokens": 100,
         "top_p": 1,
         "frequency_penalty": 0,
-        "presence_penalty": 0,
+        "presence_penalty": 0.6,
     }
     try:
         print('OpenAI request: {}'.format(prompt))
